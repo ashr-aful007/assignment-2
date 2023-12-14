@@ -8,7 +8,8 @@ app.use(express.json())
 
 
 //route setup
-app.use('/POST/api/users', userRouts)
+app.use('/api/users', userRouts)
+
 
 
 
