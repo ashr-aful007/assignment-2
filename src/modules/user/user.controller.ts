@@ -37,16 +37,38 @@ const getusers = async(req: Request, res: Response) =>{
                data: result,
              })
      }catch(error: any){
-          res.status(200).json({
-               success: true,
-               message: 'User are retrieved successfully',
+          res.status(500).json({
+               success: false,
+               message: 'Something wrong user were not retrieved',
                data: error.message || 'Something is wrong',
              })
      }
 }
 
 
+//get single user 
+const getSingleUser = async(req: Request, res: Response) =>{
+     try{
+          const {userId} = req.params
+          const result = await userServices.getSingleusers(userId)
+
+          res.status(200).json({
+               success: true,
+               message: 'User are retrieved successfully',
+               data: result,
+             })
+
+     }catch(error: any){
+          res.status(500).json({
+               success: false,
+               message: 'Something wrong user were not retrieved',
+               data: error.message || 'Something is wrong',
+             })
+     }
+}
+
 export const userController = {
      createUser,
-     getusers
+     getusers,
+     getSingleUser
 }

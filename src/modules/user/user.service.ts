@@ -20,6 +20,12 @@ const getAllUsersFromDb = async() =>{
 }
 
 
+//get single user 
+const getSingleusers = async(_id: string) =>{
+     const result = await UserModel.findOne({_id})
+     return result
+}
+
 
 
 
@@ -30,5 +36,6 @@ const getAllUsersFromDb = async() =>{
 
 export const userServices = {
      createUserInoDB,
-     getAllUsersFromDb
+     getAllUsersFromDb,
+     getSingleusers
 }
