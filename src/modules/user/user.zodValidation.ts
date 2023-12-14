@@ -25,6 +25,7 @@ export const UserValidationSchema = z.object({
     message: 'Please provide a valid email',
   }),
   isActive: z.boolean(),
+  isDelete: z.boolean().optional().default(false),
   hobbies: z.array(z.string()),
   address: z.object({
     street: z.string().optional(),

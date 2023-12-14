@@ -15,4 +15,5 @@ export type user = {
          city: string;
          country: string;
      };
+     isDelete: boolean
  }
