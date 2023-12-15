@@ -87,10 +87,33 @@ const deleteSingleUser = async(req: Request, res: Response) =>{
      }
 }
 
+//update single user 
+const updateSingleUserById = async(req: Request, res: Response) =>{
+ try{
+     const {userId}= req.params
+     const updateData = req.body
+
+     const result = await userServices.updateSingleUser(userId, updateData)
+     res.status(200).json({
+          success: true,
+          message: 'user were updated successfully',
+          data: result
+     })
+ }catch(error: any){
+     res.status(500).json({
+          success: false,
+          message: 'user were updated successfully',
+          data: error.message || 'something wrong user were not updated'
+     })
+ }
+
+}
+
 
 export const userController = {
      createUser,
      getusers,
      getSingleUser,
-     deleteSingleUser
+     deleteSingleUser,
+     updateSingleUserById
 }

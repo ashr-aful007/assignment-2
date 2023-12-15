@@ -34,9 +34,11 @@ const deleteSingleUser = async(_id: string) =>{
 }
 
 
-
-
-
+//update single user 
+const updateSingleUser = async(_id: string, updateData: any) =>{
+     const result = await UserModel.findByIdAndUpdate(_id, updateData, {new: true});
+     return result
+}
 
 
 
@@ -44,5 +46,6 @@ export const userServices = {
      createUserInoDB,
      getAllUsersFromDb,
      getSingleusers,
-     deleteSingleUser
+     deleteSingleUser,
+     updateSingleUser
 }
