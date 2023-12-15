@@ -7,6 +7,7 @@ router.get('/get-all-users', userController.getusers)
 router.get('/:userId', userController.getSingleUser)
 router.delete('/:userId', userController.deleteSingleUser)
 router.put('/:userId', userController.updateSingleUserById)
+router.put('/:userId/orders', userController.addUserOrder)
 
 
 

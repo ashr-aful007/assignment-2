@@ -110,10 +110,33 @@ const updateSingleUserById = async(req: Request, res: Response) =>{
 }
 
 
+const addUserOrder = async(req: Request, res: Response) =>{
+     try{
+          const {userId} = req.params
+          const order = req.body
+     
+          const result = await userServices.addProductToDb(userId, order)
+     
+          res.status(200).json({
+               success: true,
+               message: 'Order add successfuly',
+               data: result
+          })
+     }catch(error: any){
+          res.status(500).json({
+               success: false,
+               message: 'user were not found',
+               data: error.message || 'something wrong user were not found'
+          })
+     }
+}
+
+
 export const userController = {
      createUser,
      getusers,
      getSingleUser,
      deleteSingleUser,
-     updateSingleUserById
+     updateSingleUserById,
+     addUserOrder
 }

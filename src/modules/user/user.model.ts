@@ -55,6 +55,7 @@ export const userSchema = new Schema<user>({
           type: Boolean,
           default: false
      },
+     orders: []
 
 
 })

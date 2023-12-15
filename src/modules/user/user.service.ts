@@ -40,6 +40,11 @@ const updateSingleUser = async(_id: string, updateData: any) =>{
      return result
 }
 
+//add order 
+const addProductToDb = async(_id:string, product: any) =>{
+     const result = await UserModel.findByIdAndUpdate(_id, product, {new: true})
+     return result
+}
 
 
 export const userServices = {
@@ -47,5 +52,6 @@ export const userServices = {
      getAllUsersFromDb,
      getSingleusers,
      deleteSingleUser,
-     updateSingleUser
+     updateSingleUser,
+     addProductToDb
 }

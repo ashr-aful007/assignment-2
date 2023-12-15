@@ -15,5 +15,10 @@ export type user = {
          city: string;
          country: string;
      };
-     isDelete: boolean
+     isDelete: boolean;
+     orders?:[
+            productName: string,
+            price: number,
+            quantity: number 
+     ]
  }
