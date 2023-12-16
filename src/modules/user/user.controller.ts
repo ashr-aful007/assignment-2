@@ -109,7 +109,7 @@ const updateSingleUserById = async(req: Request, res: Response) =>{
 
 }
 
-
+//add order from db 
 const addUserOrder = async(req: Request, res: Response) =>{
      try{
           const {userId} = req.params
@@ -131,6 +131,26 @@ const addUserOrder = async(req: Request, res: Response) =>{
      }
 }
 
+//get all order 
+const getUserOrder = async(req: Request, res: Response) =>{
+     try{
+          const {userId} = req.params;
+          const userDataOrder = await userServices.getAllOrders(userId)
+
+          res.status(200).json({
+               success: true,
+               message: 'all order collection',
+               data: userDataOrder?.orders || null
+          })
+     }catch(error: any){
+          res.status(500).json({
+               success: false,
+               message: 'Order were not found',
+               data: error.message || 'this user did not any order yet!'
+          })
+     }
+}
+
 
 export const userController = {
      createUser,
@@ -138,5 +158,6 @@ export const userController = {
      getSingleUser,
      deleteSingleUser,
      updateSingleUserById,
-     addUserOrder
+     addUserOrder,
+     getUserOrder
 }

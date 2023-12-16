@@ -46,6 +46,12 @@ const addProductToDb = async(_id:string, product: any) =>{
      return result
 }
 
+//get all Orders
+const getAllOrders = async(_id: string) =>{
+     const result = await UserModel.findById(_id)
+     return result
+}
+
 
 export const userServices = {
      createUserInoDB,
@@ -53,5 +59,6 @@ export const userServices = {
      getSingleusers,
      deleteSingleUser,
      updateSingleUser,
-     addProductToDb
+     addProductToDb,
+     getAllOrders
 }
