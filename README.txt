@@ -1,8 +1,10 @@
 #assignment-2
 ##API use instruction
 
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/
+
 1.for user 
-# http://localhost:5002/api/users/create-user 
+# https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/ 
 
 this api help to user thy can create profile! with there 
 requre data! if user were created successfuly it will show with response! Existing
@@ -37,22 +39,22 @@ user can't create same profile agin.
 }
 
 
-#2. get all user this Route for Admin
-http://localhost:5002/api/users/get-all-users
+#2.GET all user this Route for Admin
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/
 
 this route provide all user collection in dataBase.
 
 
 #3.Get single user 
-http://localhost:5002/api/users/6575d11e51a5498c92715f20
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/:userId
 
 this Route for get single user! this query work with by user ID!
-it's work with dynamicly 
+it's work with dynamicly.
 
 
 
 #4.Delete user 
-http://localhost:5002/api/users/6575d11e51a5498c92715f20
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/:userId
 
 basicly this route work for Delete user with Delete Method.
 it's take action with User ID.
@@ -60,21 +62,21 @@ it's take action with User ID.
 
 
 #5.Update User with PUT
-http://localhost:5002/api/users/657a9739c5bacaa7295bd336
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/:userId
 
 this route for Update user with User Id. User can update there data.
 it's help to user Update there data.
 
 
 #6.Add orders with PUT method 
-http://localhost:5002/api/users/657a9739c5bacaa7295bd336/orders
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/:userId/orders
 
 this route for add Orders. when user try to add order. this route help to user 
 to add orders.it's store the data.
 
 
 #7.Get users all data 
-http://localhost:5002/api/users/657a9739c5bacaa7295bd336/orders
+https://assignment-2-48b2zj3lj-ashr-aful007.vercel.app/api/users/:userId/orders
 
 with this route user able to see there all order. with his ID.
 it's helpful to track Orders.
