@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import { userServices } from "./user.service";
+import { UserModel } from "./user.model";
 
 
 //this route for creating user 
