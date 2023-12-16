@@ -70,7 +70,17 @@ it's help to user Update there data.
 http://localhost:5002/api/users/657a9739c5bacaa7295bd336/orders
 
 this route for add Orders. when user try to add order. this route help to user 
-to add orders.
+to add orders.it's store the data.
+
+
+#7.Get users all data 
+http://localhost:5002/api/users/657a9739c5bacaa7295bd336/orders
+
+with this route user able to see there all order. with his ID.
+it's helpful to track Orders.
+
+
+
 
 
 
