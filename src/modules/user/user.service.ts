@@ -6,6 +6,10 @@ import UserValidationSchema from "./user.zodValidation";
 //create user 
 const createUserInoDB = async(user: user) =>{
 
+     if( await UserModel.isUserExists(user.userId)){
+          throw new Error('User already exists!')
+       }
+
      await UserValidationSchema.parse(user)
       const Dbuser = new UserModel(user)
       const result = await Dbuser.save()

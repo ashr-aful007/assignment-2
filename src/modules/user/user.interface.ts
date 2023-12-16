@@ -1,3 +1,5 @@
+import { Model } from "mongoose";
+
 export type user = {
      userId: number;
      username: string;
@@ -22,3 +24,9 @@ export type user = {
             quantity: number 
      ]
  }
+
+
+ //for creating static
+export interface UserStaticModel extends Model<user>{
+    isUserExists(userId:number) : Promise<user | null>
+}
